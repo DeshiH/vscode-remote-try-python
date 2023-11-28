@@ -23,14 +23,9 @@ def game():
             print("Wrong option for Player 1. Please choose rock, paper, or scissors.")
             continue
 
-        while True:
-            player2 = input("Player 2, choose rock, paper, or scissors: ").lower()
+        player2 = random.choice(options)  # La máquina (jugador 2) elige aleatoriamente una opción
 
-            if player2 not in options:
-                print("Wrong option for Player 2. Please choose rock, paper, or scissors.")
-                continue
-            else:
-                break
+        print(f"Player 2 chooses: {player2}")
 
         if player1 == player2:
             print("Tie!")
